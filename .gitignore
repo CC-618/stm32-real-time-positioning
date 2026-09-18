@@ -1,0 +1,20 @@
+# Keep only the two STM32 projects that form this repository.
+/*
+!/工训 实时 - 第二圈/
+!/stm32-positioning/
+!.gitignore
+
+# Keil build output and per-user settings.
+**/OBJ/
+**/Listings/
+**/*.axf
+**/*.bin
+**/*.hex
+**/*.map
+**/*.lst
+**/*.uvoptx
+**/*.uvguix.*
+**/JLinkLog.txt
+**/JLinkSettings.ini
+**/DebugConfig/
+**/*.zip
