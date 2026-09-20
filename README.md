@@ -1,26 +1,26 @@
-# STM32 Real-Time Control and Positioning
+# STM32 实时控制与定位
 
-STM32F103 firmware projects developed for an engineering-training competition robot. The repository contains a real-time motion-control program and a separate VL53L1X ranging/positioning program.
+本仓库包含工训竞赛机器人的 STM32F103 固件，包括实时运动控制程序和基于 VL53L1X 的测距定位程序。
 
-## Projects
+## 工程说明
 
-- `工训 实时 - 第二圈/` - Main real-time robot control firmware. It combines motor control, encoders, PID loops, inertial sensing, serial communication, and competition-specific motion logic.
-- `stm32-positioning/` - STM32F103 positioning firmware using the VL53L1X time-of-flight sensor, encoder feedback, PID control, and common peripherals such as UART, SPI, CAN, PWM, and OLED output.
+- `工训 实时 - 第二圈/`：机器人实时控制主程序，包含电机控制、编码器、PID 闭环、姿态传感、串口通信和竞赛运动逻辑。
+- `stm32-positioning/`：基于 STM32F103 的定位程序，使用 VL53L1X 飞行时间测距传感器、编码器反馈和 PID 控制，并包含 UART、SPI、CAN、PWM、OLED 等外设支持。
 
-## Hardware and tools
+## 硬件与工具
 
-- MCU: STM32F103 (high-density device configuration)
-- Toolchain: Keil MDK / Arm Compiler
-- Project files: `USER/Template.uvprojx` in each project directory
+- MCU：STM32F103（大容量型号配置）
+- 开发工具：Keil MDK / Arm Compiler
+- 工程文件：各工程目录下的 `USER/Template.uvprojx`
 
-## Build
+## 编译与下载
 
-1. Open the relevant `Template.uvprojx` file in Keil MDK.
-2. Check the target device, clock, and board wiring before building.
-3. Build and download the firmware with a supported ST-Link or compatible debugger.
+1. 使用 Keil MDK 打开对应工程的 `Template.uvprojx` 文件。
+2. 编译前检查目标芯片、时钟配置和开发板接线。
+3. 使用 ST-Link 或兼容调试器编译并下载固件。
 
-## Notes
+## 注意事项
 
-The code is provided as competition-project source. Pin assignments, sensor addresses, PID parameters, and motor polarity depend on the original hardware and may need adjustment for another board.
+本代码来源于竞赛项目。引脚分配、传感器地址、PID 参数和电机方向均依赖原始硬件，移植到其他开发板时需要重新检查和调整。
 
-The STM32 standard peripheral library and the VL53L1X driver are included in the project tree. Their original license and attribution terms apply.
+工程中包含 STM32 标准外设库和 VL53L1X 驱动，其原始许可和署名要求仍然有效。
